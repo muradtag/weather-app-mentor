@@ -1,7 +1,9 @@
 <div class="home">
   <div *ngIf="!this.locationValid">Loading...</div>
   <div *ngIf="this.locationValid">
-    <app-current-weather [weatherData]="this.weatherData"></app-current-weather>
-    <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather>
+    <!-- <app-current-weather [weatherData]="this.weatherData"></app-current-weather> -->
+    <!-- <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather> -->
+    <!-- <app-weekly-weather [weatherData]="this.weatherData"></app-weekly-weather> -->
+    <app-cities></app-cities>
   </div>
 </div>

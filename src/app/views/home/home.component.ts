@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
         next: (data) => {
           this.weatherData = data;
           this.locationValid = true;
-          console.log(data);
+          // console.log(data);
         },
         error: (err) => console.log(err),
       });
