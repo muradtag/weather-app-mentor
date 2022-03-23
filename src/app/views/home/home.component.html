@@ -1,9 +1,7 @@
 <div class="home">
-  <div *ngIf="!this.locationValid">
-    Please allow website to access your location
+  <div *ngIf="!this.locationValid">Loading...</div>
+  <div *ngIf="this.locationValid">
+    <app-current-weather [weatherData]="this.weatherData"></app-current-weather>
+    <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather>
   </div>
-  <app-current-weather
-    *ngIf="this.locationValid"
-    [weatherData]="this.weatherData"
-  ></app-current-weather>
 </div>

@@ -11,9 +11,26 @@
 body {
   width: 100vw;
   height: 100vh;
+  /* background-color: rgb(135, 187, 182); */
   background-image: url("./assets/images/bg.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   font-family: Roboto;
-  padding: 20px;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  height: 50%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }

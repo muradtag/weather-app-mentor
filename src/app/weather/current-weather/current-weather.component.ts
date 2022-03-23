@@ -51,7 +51,8 @@ export class CurrentWeatherComponent implements OnInit {
         this.isDayTime === 'yes'
           ? './assets/images/weather-icons/116-1.png'
           : './assets/images/weather-icons/116-2.png';
-    else this.imageSrc = `./assets/images/${this.weatherCode}.png`;
+    else
+      this.imageSrc = `./assets/images/weather-icons/${this.weatherCode}.png`;
 
     // console.log(this.date);
   }

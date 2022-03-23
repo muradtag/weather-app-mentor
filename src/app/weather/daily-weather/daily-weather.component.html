@@ -1,1 +1,21 @@
-<p>daily-weather works!</p>
+<!-- <p>daily-weather works!</p> -->
+<div class="container">
+  <div class="daily-weather">
+    <div *ngFor="let hour of hourlyData; let i = index">
+      <div class="hour">
+        <p class="text">{{ getTime(i) }}</p>
+        <img
+          src="{{ getImageSrc(hour.weatherCode, hour.isdaytime) }}"
+          alt="{{ hour.weatherCode }}"
+          width="35px"
+        />
+        <p class="text">{{ hour.tempC }}°</p>
+        <div class="humidity">
+          <img width="15px" src="./assets/images/humidity.png" alt="" />
+          <span>{{ hour.humidity }}%</span>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>
