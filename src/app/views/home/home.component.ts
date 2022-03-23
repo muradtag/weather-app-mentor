@@ -12,6 +12,7 @@ import { switchMap } from 'rxjs';
 export class HomeComponent implements OnInit {
   weatherData: any;
   locationValid: Boolean = false;
+  country: string = '';
 
   constructor(
     private weatherServ: WeatherService,
@@ -28,6 +29,7 @@ export class HomeComponent implements OnInit {
         next: (data) => {
           this.weatherData = data;
           this.locationValid = true;
+          this.country = this.weatherData.data.nearest_area[0].country[0].value;
           // console.log(data);
         },
         error: (err) => console.log(err),

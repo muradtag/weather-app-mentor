@@ -1,1 +1,9 @@
-<p>cities works!</p>
+<!-- <p>cities works!</p> -->
+<div class="container">
+  <h3>Choose a city</h3>
+  <hr style="margin: 10px 0" />
+  <div *ngIf="!loaded">Loading...</div>
+  <div class="cities" *ngIf="loaded">
+    <div class="city" *ngFor="let city of cities">{{ city }}</div>
+  </div>
+</div>
