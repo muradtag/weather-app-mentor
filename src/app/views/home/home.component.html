@@ -1,9 +1,20 @@
 <div class="home">
-  <div *ngIf="!this.locationValid">Loading...</div>
-  <div *ngIf="this.locationValid">
-    <!-- <app-current-weather [weatherData]="this.weatherData"></app-current-weather> -->
-    <!-- <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather> -->
-    <!-- <app-weekly-weather [weatherData]="this.weatherData"></app-weekly-weather> -->
-    <app-cities [country]="this.country"></app-cities>
+  <div *ngIf="!this.locationValid">
+    Loading... Waiting for location Permission. Please allow.
+  </div>
+  <div *ngIf="this.locationValid" class="home">
+    <div class="col1">
+      <app-current-weather
+        [weatherData]="this.weatherData"
+      ></app-current-weather>
+      <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather>
+    </div>
+    <div class="col2">
+      <app-weekly-weather [weatherData]="this.weatherData"></app-weekly-weather>
+    </div>
+    <div class="col3">
+      <app-cities [country]="this.country"></app-cities>
+    </div>
+    <!-- <app-weather-details [weatherData]="this.weatherData"></app-weather-details> -->
   </div>
 </div>

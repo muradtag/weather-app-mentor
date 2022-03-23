@@ -51,7 +51,7 @@ export class WeeklyWeatherComponent implements OnInit {
 
   ngOnInit(): void {
     this.weeklyWeather = this.weatherData.data.weather.slice(0, 7);
-    console.log(this.weeklyWeather);
-    console.log(new Date('2022-03-01').getDay());
+    // console.log(this.weeklyWeather);
+    // console.log(new Date('2022-03-01').getDay());
   }
 }

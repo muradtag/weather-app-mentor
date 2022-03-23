@@ -3,7 +3,12 @@
   <h3>Choose a city</h3>
   <hr style="margin: 10px 0" />
   <div *ngIf="!loaded">Loading...</div>
-  <div class="cities" *ngIf="loaded">
-    <div class="city" *ngFor="let city of cities">{{ city }}</div>
+  <div *ngIf="error">Country not Found.</div>
+  <div class="cities" *ngIf="loaded && !error">
+    <div *ngFor="let city of cities">
+      <a [routerLink]="['/', parseCity(city)]">
+        <div class="city">{{ city }}</div>
+      </a>
+    </div>
   </div>
 </div>

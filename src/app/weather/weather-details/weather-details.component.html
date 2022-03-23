@@ -1,1 +1,14 @@
-<p>weather-details works!</p>
+<!-- <p>weather-details works!</p> -->
+<div class="container">
+  <div class="section" *ngFor="let section of data">
+    <img
+      src="./assets/images/{{ section.imageSrc }}"
+      alt="{{ section.title }}"
+      width="50px"
+    />
+    <p class="title">{{ section.title }}</p>
+    <p>
+      <strong>{{ section.value }} {{ section.unit }}</strong>
+    </p>
+  </div>
+</div>

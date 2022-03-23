@@ -5,6 +5,7 @@
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.25);
   margin: 20px;
   height: 90vh;
+  /* height: 96%; */
   overflow: hidden;
   transition: transform 0.1s ease-in-out;
 }
@@ -22,14 +23,22 @@
 
 .city {
   padding: 5px;
+  position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .city:hover {
   transform: scale(1.05);
   border-bottom: 1px solid rgba(0, 0, 0, 1);
+  margin-left: 5px;
+  /* left: 0; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .text {

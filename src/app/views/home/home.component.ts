@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
           this.weatherData = data;
           this.locationValid = true;
           this.country = this.weatherData.data.nearest_area[0].country[0].value;
-          // console.log(data);
+          console.log(data);
         },
         error: (err) => console.log(err),
       });
