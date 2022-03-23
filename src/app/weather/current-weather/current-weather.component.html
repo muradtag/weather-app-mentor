@@ -1,0 +1,27 @@
+<!-- <p>current-weather works!</p> -->
+<div class="current-weather">
+  <div class="location">
+    <p>
+      <i class="fa fa-map-marker"></i>
+      {{ this.areaName }},
+      {{ this.country }}
+    </p>
+    <p class="date">{{ this.date }}</p>
+  </div>
+  <div class="temp">
+    <p class="temp-c">
+      {{ this.currentTemp }}°<span style="font-size: 1.5rem">C</span>
+    </p>
+    <img width="70px" src="{{ this.imageSrc }}" alt="{{ this.weatherCode }}" />
+  </div>
+  <div class="extra-desc">
+    <div>
+      <p>{{ this.weatherDesc }}</p>
+      <p>{{ this.maxTemp }}° / {{ this.minTemp }}°</p>
+    </div>
+    <div class="humidity">
+      <img width="15px" src="./assets/images/humidity.png" alt="" />
+      <span>{{ this.humidity }}%</span>
+    </div>
+  </div>
+</div>

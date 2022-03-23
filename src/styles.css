@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Roboto;
+  padding: 20px;
+}
