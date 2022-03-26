@@ -5,6 +5,15 @@
         <p class="text">{{ getDay(day.date) }}</p>
         <div>
           <img
+            src="./assets/images/uv.jpg"
+            alt="{{ day.weatherCode }}"
+            width="20px"
+            style="margin-right: 10px"
+          />
+          <span class="text">{{ day.uvIndex }}</span>
+        </div>
+        <div>
+          <img
             src="{{
               getImageSrc(day.hourly[9].weatherCode, day.hourly[9].isdaytime)
             }}"
@@ -20,7 +29,7 @@
             width="30px"
           />
         </div>
-        <p class="text">{{ day.mintempC }}°/{{ day.maxtempC }}°</p>
+        <p class="text">{{ day.maxtempC }}°/{{ day.mintempC }}°</p>
       </div>
       <!-- <hr /> -->
     </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CitiesService } from 'src/app/services/cities.service';
 import { WeatherService } from 'src/app/services/weather.service';
 import { LocationService } from 'src/app/services/location.service';
 import { switchMap } from 'rxjs';
@@ -24,6 +23,7 @@ export class HomeComponent implements OnInit {
       .getPosition()
       .pipe(
         switchMap((pos) => this.weatherServ.getWeather(`${pos.lat},${pos.lng}`))
+        // switchMap((pos) => this.weatherServ.getWeather(`australia`))
       )
       .subscribe({
         next: (data) => {

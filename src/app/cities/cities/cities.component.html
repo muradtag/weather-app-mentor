@@ -6,7 +6,7 @@
   <div *ngIf="error">Country not Found.</div>
   <div class="cities" *ngIf="loaded && !error">
     <div *ngFor="let city of cities">
-      <a [routerLink]="['/', parseCity(city)]">
+      <a [routerLink]="['/', parseCity(city), parseCity(country)]">
         <div class="city">{{ city }}</div>
       </a>
     </div>

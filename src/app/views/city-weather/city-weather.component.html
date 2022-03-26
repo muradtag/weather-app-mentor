@@ -1,22 +1,26 @@
-<!-- <div class="city">
-  <div *ngIf="!this.locationValid">
-    Loading... Waiting for location Permission. Please allow.
+<div>
+  <div *ngIf="!CurrentLoaded || !PastLoaded">Loading...</div>
+  <div class="error" *ngIf="CurrentLoaded && CurrentError">
+    Couldn't Find City Data. Please try again!
   </div>
-  <div *ngIf="this.locationValid" class="home">
+  <div *ngIf="CurrentLoaded && !CurrentError" class="city">
     <div class="col1">
       <app-current-weather
         [weatherData]="this.weatherData"
       ></app-current-weather>
-      <app-daily-weather [weatherData]="this.weatherData"></app-daily-weather>
-    </div>
-    <div class="col2">
       <app-weekly-weather [weatherData]="this.weatherData"></app-weekly-weather>
     </div>
-    <div class="col3">
-      <app-cities [country]="this.country"></app-cities>
+    <div class="col2">
+      <app-weather-details
+        [weatherData]="this.weatherData"
+      ></app-weather-details>
+      <app-forecast [weatherData]="weatherData"></app-forecast>
+      <app-monthly-forecast
+        *ngIf="PastLoaded"
+        [monthlyData]="monthlyData"
+      ></app-monthly-forecast>
     </div>
-    <app-weather-details [weatherData]="this.weatherData"></app-weather-details>
   </div>
-</div> -->
+</div>
 
-<p>City weather</p>
+<!-- <p>City weather</p> -->

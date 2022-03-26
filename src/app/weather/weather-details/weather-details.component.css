@@ -20,7 +20,7 @@
   width: 105px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin: 10px;
 }

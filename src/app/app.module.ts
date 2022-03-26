@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { GraphsModule } from './graphs/graphs.module';
 import { ViewsModule } from './views/views.module';
 import { WeatherModule } from './weather/weather.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ErrorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -37,6 +37,6 @@ export class WeatherDetailsComponent implements OnInit {
     this.data[3].value = this.weatherData.data.current_condition[0].humidity;
     this.data[4].value = this.weatherData.data.current_condition[0].visibility;
     this.data[5].value = this.weatherData.data.current_condition[0].uvIndex;
-    console.log(this.data);
+    // console.log(this.data);
   }
 }

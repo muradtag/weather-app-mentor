@@ -34,7 +34,7 @@ export class WeatherService {
     lastMonth.setHours(0, 0, 0, 0);
     lastMonth = lastMonth.toISOString().slice(0, 10);
 
-    console.log(today, lastMonth);
+    // console.log(today, lastMonth);
 
     let url =
       this.baseUrl +

@@ -1,4 +1,4 @@
-<div class="home">
+<div>
   <div *ngIf="!this.locationValid">
     Loading... Waiting for location Permission. Please allow.
   </div>
@@ -11,6 +11,7 @@
     </div>
     <div class="col2">
       <app-weekly-weather [weatherData]="this.weatherData"></app-weekly-weather>
+      <app-world-map></app-world-map>
     </div>
     <div class="col3">
       <app-cities [country]="this.country"></app-cities>
