@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
     this.location
       .getPosition()
       .pipe(
+        // switchMap((pos) => this.weatherServ.getWeather(`manila`))
         switchMap((pos) => this.weatherServ.getWeather(`${pos.lat},${pos.lng}`))
-        // switchMap((pos) => this.weatherServ.getWeather(`australia`))
       )
       .subscribe({
         next: (data) => {
