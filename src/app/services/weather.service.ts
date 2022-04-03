@@ -9,7 +9,7 @@ export class WeatherService {
   private apiKey = 'd3eff03e2fed4ae9813152851222103';
   private format = '&format=json';
   private includeLocation = '&includeLocation=yes';
-  private baseUrl = `http://api.worldweatheronline.com/premium/v1/`;
+  private baseUrl = `https://api.worldweatheronline.com/premium/v1/`;
 
   getWeather(location: string) {
     let url =
